@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="394.0" prefWidth="453.0" style="-fx-background-color: #BBDEFB;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bookstore.addCustomer.CustAddController">
+    <stylesheets>
+        <URL value="@custadd.css" />
+    </stylesheets>
+   <children>
+      <Pane fx:id="pane" layoutX="18.0" layoutY="21.0" prefHeight="301.0" prefWidth="415.0" style="-fx-background-color: #ffffff;">
+         <children>
+            <VBox prefHeight="301.0" prefWidth="415.0">
+               <children>
+                  <JFXTextField fx:id="cust_id" disable="true" editable="false" labelFloat="true" promptText="Customer ID :">
+                     <VBox.margin>
+                        <Insets left="10.0" right="10.0" top="20.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="Cooper Black" size="19.0" />
+                     </font>
+                     <unFocusColor>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop color="#36f800" />
+                              <Stop color="#00ff20" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </unFocusColor>
+                  </JFXTextField>
+                  <JFXTextField fx:id="cust_name" labelFloat="true" layoutX="20.0" layoutY="30.0" promptText="Customer Name :">
+                     <VBox.margin>
+                        <Insets left="10.0" right="10.0" top="35.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="Cooper Black" size="19.0" />
+                     </font>
+                     <unFocusColor>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop color="#36f800" />
+                              <Stop color="#00ff20" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </unFocusColor>
+                  </JFXTextField>
+                  <JFXTextField fx:id="mb_no" labelFloat="true" layoutX="20.0" layoutY="30.0" promptText="Mobile Number :">
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="35.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="Cooper Black" size="19.0" />
+                     </font>
+                     <unFocusColor>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop color="#36f800" />
+                              <Stop color="#00ff20" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </unFocusColor>
+                  </JFXTextField>
+                  <JFXTextField fx:id="email_id" labelFloat="true" layoutX="10.0" layoutY="55.0" promptText="Email ID :">
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="30.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="Cooper Black" size="19.0" />
+                     </font>
+                     <unFocusColor>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop color="#36f800" />
+                              <Stop color="#00ff20" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </unFocusColor>
+                  </JFXTextField>
+               </children>
+            </VBox>
+         </children>
+      </Pane>
+      <JFXButton fx:id="save" buttonType="RAISED" layoutX="25.0" layoutY="330.0" onAction="#addCust" prefHeight="50.0" prefWidth="143.0" ripplerFill="#f5f5f5" style="-fx-background-color: #2196F3;" text="Save" textFill="#f8f5f5">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXButton>
+      <JFXButton fx:id="cancel" buttonType="RAISED" layoutX="283.0" layoutY="330.0" onAction="#cancel" prefHeight="50.0" prefWidth="143.0" ripplerFill="#f5f5f5" style="-fx-background-color: #2196F3;" text="Cancel" textFill="#f8f5f5">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXButton>
+   </children>
+</AnchorPane>

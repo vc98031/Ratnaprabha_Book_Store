@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXSpinner?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<StackPane fx:id="root" prefHeight="600.0" prefWidth="619.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bookstore.MainUI.HelpWindowController">
+   <children>
+      <ImageView fitHeight="613.0" fitWidth="720.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icons/help.jpg" />
+         </image>
+      </ImageView>
+      <AnchorPane id="AnchorPane" fx:id="anchor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="700.0" stylesheets="@../css/mouse_hover.css">
+         <children>
+           
+            <Pane prefHeight="45.0" prefWidth="700.0">
+               <opaqueInsets>
+                  <Insets left="50.0" />
+               </opaqueInsets>
+               <children>
+                  <HBox alignment="CENTER" prefHeight="45.0" prefWidth="700.0">
+                     <children>
+                        <Text fill="#00ffda" strokeType="OUTSIDE" strokeWidth="0.0" text="Contact Us">
+                           <font>
+                              <Font name="Arial Narrow Bold" size="35.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets top="5.0" />
+                           </HBox.margin>
+                        </Text>
+                     </children>
+                  </HBox>
+               </children>
+            </Pane>
+            <StackPane layoutX="89.0" layoutY="8.0" prefHeight="582.0" prefWidth="523.0">
+               <children>
+                  <JFXTabPane fx:id="tabpane" opacity="0.73" prefHeight="565.0" prefWidth="523.0">
+                     <tabs>
+                      
+                        <Tab fx:id="onkar">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="548.0" prefWidth="200.0">
+                                       <children>
+                                          <Text layoutX="222.0" layoutY="615.0" strokeType="OUTSIDE" strokeWidth="0.0" text="+91 9067040989" wrappingWidth="266.9999994337559">
+                                             <font>
+                                                <Font size="34.0" />
+                                             </font>
+                                          </Text>
+                                          <ImageView fitHeight="57.0" fitWidth="83.0" layoutX="110.0" layoutY="580.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../icons/whatsapp.png" />
+                                             </image>
+                                          </ImageView>
+                                       </children>
+                                    </AnchorPane>
+                                    <Text fill="WHITE" layoutX="139.0" layoutY="406.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dist-Solapur     Pin-413305" wrappingWidth="372.00000405311584">
+                                       <font>
+                                          <Font size="24.0" />
+                                       </font>
+                                    </Text>
+                                    <Circle fx:id="circle1" fill="#2197ff00" layoutX="262.0" layoutY="71.0" onMouseClicked="#load_img" radius="71.0" stroke="#34b928" strokeType="INSIDE" strokeWidth="2.0">
+                                       <effect>
+                                          <DropShadow color="#0d8a22" height="68.04" radius="33.4225" spread="0.71" width="67.65" />
+                                       </effect>
+                                    </Circle>
+                                    <Circle fx:id="img11" fill="#f7f7f7" layoutX="262.0" layoutY="71.0" radius="63.0" stroke="#34b928" strokeType="INSIDE" strokeWidth="0.0" />
+                                    <JFXSpinner layoutX="191.0" layoutY="-5.0" prefHeight="152.0" prefWidth="142.0" />
+                                    <Text fill="WHITE" layoutX="127.0" layoutY="179.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Vivek Chavan" textAlignment="CENTER" wrappingWidth="266.9999985694885">
+                                       <font>
+                                          <Font size="29.0" />
+                                       </font>
+                                    </Text>
+                                    <Text fill="WHITE" fontSmoothingType="LCD" layoutX="72.0" layoutY="208.0" strokeType="OUTSIDE" strokeWidth="0.0" text="chavanvivek920@gmail.com" textAlignment="CENTER" underline="true" wrappingWidth="375.9999985694885">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                       <effect>
+                                          <Reflection />
+                                       </effect>
+                                    </Text>
+                                    <Text fill="WHITE" layoutX="28.0" layoutY="247.0" strokeType="OUTSIDE" strokeWidth="0.0" text="College :   Sangola College, Sangola" wrappingWidth="445.6708984375">
+                                       <font>
+                                          <Font size="24.0" />
+                                       </font>
+                                    </Text>
+                                    <Text fill="WHITE" layoutX="28.0" layoutY="279.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Role       :   Analyzer , Developer , Designer ," wrappingWidth="489.6708984375">
+                                       <font>
+                                          <Font size="24.0" />
+                                       </font>
+                                    </Text>
+                                    <Text fill="WHITE" layoutX="14.0" layoutY="320.0" strokeType="OUTSIDE" strokeWidth="0.0" text="                    Tester" wrappingWidth="302.6708984375">
+                                       <font>
+                                          <Font size="24.0" />
+                                       </font>
+                                    </Text>
+                                    <Text fill="WHITE" layoutX="17.0" layoutY="360.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Address  :  At-Mangalwedha  Tal-Mangalwedha" wrappingWidth="510.6708984375">
+                                       <font>
+                                          <Font size="24.0" />
+                                       </font>
+                                    </Text>
+                                    <Text fill="WHITE" layoutX="139.0" layoutY="470.0" strokeType="OUTSIDE" strokeWidth="0.0" text="+91 9359698919" wrappingWidth="302.9999994337559">
+                                       <font>
+                                          <Font size="34.0" />
+                                       </font>
+                                    </Text>
+                                    <ImageView fitHeight="36.0" fitWidth="57.0" layoutX="47.0" layoutY="438.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../icons/whatsapp.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fitHeight="89.0" fitWidth="79.0" layoutX="226.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../icons/IMG_20200131_153749.jpg" />
+                                       </image>
+                                    </ImageView>
+                                 </children></AnchorPane>
+                          </content>
+                        </Tab>
+                     </tabs>
+                  </JFXTabPane>
+               </children>
+            </StackPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

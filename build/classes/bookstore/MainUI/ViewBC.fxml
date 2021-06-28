@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1164.0" style="-fx-background-color: #BDBDBD;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bookstore.MainUI.ViewBCController">
+   <children>
+      <JFXTabPane fx:id="tabPane" layoutX="53.0" prefHeight="650.0" prefWidth="958.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="53.0" AnchorPane.rightAnchor="49.0" AnchorPane.topAnchor="0.0">
+         <tabs>
+            <Tab fx:id="allBookTab" text="All Books">
+              <content>
+                <AnchorPane fx:id="allBookPane" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: linear-gradient(from 25% 25% to 100% 100% , #6c2a99, #ffffff);" />
+              </content>
+            </Tab>
+            <Tab fx:id="allCustTab" text="All Customer">
+              <content>
+                <AnchorPane fx:id="allCustPane" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="812.0" style="-fx-background-color: linear-gradient(from 25% 25% to 100% 100% , #6c2a99, #ffffff);" />
+              </content>
+            </Tab>
+            <Tab fx:id="bDetailsTab" text="Book Details">
+              <content>
+                <AnchorPane fx:id="bDetailsPane" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: linear-gradient(from 25% 25% to 100% 100% , #6c2a99, #ffffff);">
+                     <children>
+                        <TextField fx:id="bookid" alignment="CENTER" layoutX="259.0" layoutY="36.0" promptText="Enter Book ID :">
+                           <font>
+                              <Font name="Ink Free" size="14.0" />
+                           </font>
+                        </TextField>
+                        <JFXButton layoutX="435.0" layoutY="31.0" onAction="#searchBk" prefHeight="39.0" prefWidth="63.0" text=" ">
+                           <cursor>
+                             <Cursor fx:constant="HAND" />  
+                           </cursor>
+                           <graphic>
+                              <ImageView fitHeight="31.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../icons/search.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                        <JFXTextField fx:id="bookname" alignment="CENTER" labelFloat="true" layoutX="565.0" layoutY="37.0" prefHeight="26.0" prefWidth="207.0" promptText="Enter Book Name :">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXButton layoutX="772.0" layoutY="31.0" onAction="#searchBk" prefHeight="39.0" prefWidth="63.0" text=" ">
+                           <cursor>
+                           <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <graphic>
+                              <ImageView fitHeight="31.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../icons/search.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                        <Label layoutY="6.0" prefHeight="21.0" prefWidth="280.0" text="*Note : Please  Enter  Only  One  Field !" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font></Label>
+                        <StackPane fx:id="stackPane" layoutX="29.0" layoutY="80.0" prefHeight="488.0" prefWidth="995.0" />
+                        <Button layoutX="435.0" layoutY="568.0" mnemonicParsing="false" onAction="#showPieChart" prefHeight="36.0" prefWidth="248.0" text="Pie Chart">
+                           <font>
+                              <Font name="Century" size="23.0" />
+                           </font></Button>
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+            <Tab fx:id="custDetailsTab" text="Customer Details">
+               <content>
+                  <AnchorPane fx:id="cDetailsPane" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: linear-gradient(from 25% 25% to 100% 100% , #6c2a99, #ffffff);">
+                     <children>
+                        <TextField fx:id="custID" alignment="CENTER" layoutX="443.0" layoutY="21.0" prefHeight="30.0" prefWidth="177.0" promptText="Enter Customer ID :">
+                           <font>
+                              <Font name="Ink Free" size="14.0" />
+                           </font>
+                        </TextField>
+                        <Button layoutX="433.0" layoutY="563.0" mnemonicParsing="false" onAction="#showPieChartCust" prefHeight="36.0" prefWidth="248.0" text="Pie Chart">
+                           <font>
+                              <Font size="23.0" />
+                           </font></Button>
+                        <JFXButton layoutX="618.0" layoutY="16.0" onAction="#searchCust" prefHeight="39.0" prefWidth="63.0" text=" ">
+                           <cursor>
+                            <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <graphic>
+                              <ImageView fitHeight="31.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../icons/search.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                        <StackPane fx:id="custStackPane" layoutX="32.0" layoutY="80.0" prefHeight="475.0" prefWidth="1000.0" />
+                     </children></AnchorPane>
+               </content>
+            </Tab>
+         </tabs>
+      </JFXTabPane>
+      <VBox alignment="CENTER" layoutY="-30.0" prefHeight="701.0" prefWidth="52.0">
+         <children>
+            <JFXButton buttonType="RAISED" onAction="#moveLeft" prefHeight="696.0" prefWidth="52.0" stylesheets="@../css/mouse_hover.css" text=" ">
+               <graphic>
+                  <ImageView fitHeight="150.0" fitWidth="19.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/left-arrow.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+         </children>
+      </VBox>
+      <VBox alignment="CENTER" layoutX="1115.0" layoutY="-24.0" prefHeight="694.0" prefWidth="52.0">
+         <children>
+            <JFXButton buttonType="RAISED" onAction="#moveRight" prefHeight="708.0" prefWidth="52.0" stylesheets="@../css/mouse_hover.css" text=" ">
+               <graphic>
+                  <ImageView fitHeight="26.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/right-arrow.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+         </children>
+         <padding>
+            <Insets left="10.0" />
+         </padding>
+      </VBox>
+   </children>
+</AnchorPane>

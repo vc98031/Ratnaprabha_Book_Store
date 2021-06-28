@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXSpinner?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTimePicker?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Circle?>
+
+<StackPane fx:id="root" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bookstore.addbooks.AddBookController">
+   <children>
+      <AnchorPane id="AnchorPane" fx:id="anchor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: linear-gradient(from 25% 25% to 100% 100% , #6c2a99, #ffffff);" stylesheets="@../css/mouse_hover.css">
+         <children>
+            <Pane layoutX="133.0" layoutY="31.0" prefHeight="460.0" prefWidth="430.0" style="-fx-background-color: #dadada77;">
+               <children>
+                  <JFXTextField fx:id="id" labelFloat="true" layoutX="63.0" layoutY="26.0" prefHeight="31.0" prefWidth="167.0" promptText="Book ID" style="fx-prompt-text-fill: white;" stylesheets="@../../../../../Javafx/Genuine%20coder/Library-Management-System-master/src/home/css/textfield_white.css" />
+                  <JFXTextField fx:id="copies" labelFloat="true" layoutX="249.0" layoutY="26.0" prefHeight="31.0" prefWidth="118.0" promptText="Copies" />
+                  <JFXTextField fx:id="name" labelFloat="true" layoutX="63.0" layoutY="87.0" prefHeight="31.0" prefWidth="304.0" promptText="Book Title" />
+                  <JFXTextField fx:id="author" labelFloat="true" layoutX="63.0" layoutY="146.0" prefHeight="31.0" prefWidth="304.0" promptText="Author" />
+                  <JFXTextField fx:id="publisher" labelFloat="true" layoutX="63.0" layoutY="203.0" prefHeight="31.0" prefWidth="304.0" promptText="Publisher" />
+                  <JFXTextField fx:id="price" labelFloat="true" layoutX="63.0" layoutY="272.0" prefHeight="31.0" prefWidth="118.0" promptText="Price">
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding></JFXTextField>
+                  <JFXDatePicker fx:id="date" layoutX="63.0" layoutY="335.0" overLay="true" prefHeight="25.0" prefWidth="194.0" promptText="Select Date">
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></JFXDatePicker>
+                  <JFXTimePicker fx:id="time" editable="true" layoutX="63.0" layoutY="384.0" overLay="true" prefHeight="31.0" prefWidth="194.0" promptText="Select Time">
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></JFXTimePicker>
+               </children>
+               <padding>
+                  <Insets right="10.0" top="10.0" />
+               </padding>
+            </Pane>
+            <JFXButton layoutX="150.0" layoutY="520.0" onAction="#reset_event" prefHeight="42.0" prefWidth="147.0" text="Reset">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="382.0" layoutY="520.0" onAction="#add_event" prefHeight="42.0" prefWidth="147.0" text="Add">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></JFXButton>
+            <JFXButton layoutX="689.0" layoutY="520.0" onAction="#barcode_event" prefHeight="42.0" prefWidth="147.0" text="Generate QR Code">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></JFXButton>
+            <Circle fx:id="img1" fill="#f7f7f7" layoutX="763.0" layoutY="139.0" radius="63.0" stroke="#34b928" strokeType="INSIDE" strokeWidth="0.0" />
+            <Circle fx:id="circle" fill="#2197ff00" layoutX="763.0" layoutY="139.0" onMouseClicked="#load_img" radius="71.0" stroke="#34b928" strokeType="INSIDE" strokeWidth="2.0">
+               <effect>
+                  <DropShadow color="#0d8a22" height="68.04" radius="33.4225" spread="0.71" width="67.65" />
+               </effect>
+            </Circle>
+            <JFXSpinner layoutX="691.0" layoutY="63.0" prefHeight="152.0" prefWidth="142.0" />
+            <ImageView fx:id="imageview" fitHeight="144.0" fitWidth="176.0" layoutX="675.0" layoutY="258.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fitHeight="70.0" fitWidth="63.0" layoutX="732.0" layoutY="108.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icons/file.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

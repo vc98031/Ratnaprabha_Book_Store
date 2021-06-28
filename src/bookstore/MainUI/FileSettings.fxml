@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="528.0" prefWidth="460.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bookstore.MainUI.FileSettingsController">
+   <children>
+      <ImageView fitHeight="538.0" fitWidth="476.0" opacity="0.37" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icons/FileSettings.jpg" />
+         </image>
+         <effect>
+            <DropShadow />
+         </effect>
+      </ImageView>
+      <JFXButton fx:id="changeBtn" buttonType="RAISED" layoutX="55.0" layoutY="450.0" onAction="#changeUP" prefHeight="45.0" prefWidth="371.0" stylesheets="@../css/mouse_hover.css" text="Change UserName &amp; Password" textFill="WHITE">
+         <font>
+            <Font name="Courier New" size="21.0" />
+         </font>
+      </JFXButton>
+      <JFXTextField fx:id="username" alignment="CENTER" focusColor="#003cee" layoutX="105.0" layoutY="70.0" prefHeight="52.0" prefWidth="272.0">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </JFXTextField>
+      <JFXPasswordField fx:id="password" alignment="CENTER" layoutX="104.0" layoutY="238.0" prefHeight="52.0" prefWidth="279.0">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </JFXPasswordField>
+   </children>
+</AnchorPane>

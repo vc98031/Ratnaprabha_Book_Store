@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDrawer?>
+<?import com.jfoenix.controls.JFXHamburger?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="anchor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#anchorMouseClicked" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #8BC34A;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bookstore.MainUI.MainUIController">
+   <children>
+      <ImageView fitHeight="666.0" fitWidth="849.0" layoutX="-9.0" layoutY="-10.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icons/BOOKSTORE2.jpg" />
+         </image>
+      </ImageView>
+      <VBox alignment="BOTTOM_CENTER" layoutY="61.0" opacity="0.47" prefHeight="572.0" prefWidth="186.0" style="-fx-background-radius: 0 60 0 0; -fx-background-color: #4FC3F7;">
+         <effect>
+            <DropShadow height="30.64" radius="13.8925" spread="0.26" width="26.93" />
+         </effect>
+         <children>
+            <Pane onMouseClicked="#anchorMouseClicked" prefHeight="521.0" prefWidth="186.0">
+               <children>
+                  <JFXButton fx:id="addBook" buttonType="RAISED" layoutX="4.0" layoutY="8.0" onAction="#addBook" prefHeight="39.0" prefWidth="178.0" text="Add Books" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Black" size="15.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <JFXButton fx:id="addCustomer" buttonType="RAISED" layoutX="4.0" layoutY="103.0" onAction="#addCustomer" prefHeight="39.0" prefWidth="178.0" text="Add Customer" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Black" size="15.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <JFXButton fx:id="searchBook" buttonType="RAISED" layoutX="4.0" layoutY="207.0" onAction="#searchBooks" prefHeight="39.0" prefWidth="178.0" text="Search Books" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Black" size="15.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <JFXButton fx:id="searchCust" buttonType="RAISED" layoutX="4.0" layoutY="310.0" onAction="#searchCustomer" prefHeight="39.0" prefWidth="178.0" text="Search Customer" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Black" size="15.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <JFXButton fx:id="soldBooks" buttonType="RAISED" layoutX="4.0" layoutY="421.0" onAction="#soldBooks" prefHeight="39.0" prefWidth="178.0" text="Sold Books" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Black" size="15.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+               </children>
+            </Pane>
+         </children>
+      </VBox>
+      <TextField fx:id="searchBox" alignment="CENTER" layoutY="7.0" prefHeight="39.0" prefWidth="594.0" promptText="Quick Access" style="-fx-background-radius: 20 20 20 20;">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </TextField>
+      
+      <JFXHamburger fx:id="hamburger" layoutX="681.0" layoutY="16.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXHamburger>
+      <JFXTabPane fx:id="tabpane" layoutX="200.0" layoutY="65.0" prefHeight="528.0" prefWidth="594.0" style="-fx-background-color: #ffffff;">
+         <tabs>
+            <Tab fx:id="payment" text="Payment">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" onMouseClicked="#anchorMouseClicked" prefHeight="180.0" prefWidth="493.0">
+                     <children>
+                        <ImageView fitHeight="487.0" fitWidth="594.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/Payment2.jpg" />
+                           </image></ImageView>
+                        <VBox prefHeight="412.0" prefWidth="502.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <HBox alignment="CENTER" prefHeight="305.0" prefWidth="594.0">
+                                 <children>
+                                    <ImageView fx:id="QRImage" fitHeight="144.0" fitWidth="176.0" pickOnBounds="true" preserveRatio="true">
+                                       <HBox.margin>
+                                          <Insets left="10.0" />
+                                       </HBox.margin>
+                                    </ImageView>
+                                    <VBox alignment="CENTER" prefHeight="184.0" prefWidth="412.0">
+                                       <children>
+                                          <Text fx:id="chooseBkCounter" strokeType="OUTSIDE" strokeWidth="0.0" text="0" textAlignment="CENTER" wrappingWidth="378.13671875">
+                                             <font>
+                                                <Font size="28.0" />
+                                             </font>
+                                          </Text>
+                                          <Text fx:id="btitle" strokeType="OUTSIDE" strokeWidth="0.0" text="Book Title" textAlignment="RIGHT" wrappingWidth="324.13671875">
+                                             <font>
+                                                <Font name="Courier New" size="20.0" />
+                                             </font>
+                                          </Text>
+                                          <Text fx:id="bauthor" layoutX="10.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Book Author" textAlignment="RIGHT" wrappingWidth="324.13671875">
+                                             <font>
+                                                <Font name="Courier New" size="20.0" />
+                                             </font>
+                                             <VBox.margin>
+                                                <Insets top="15.0" />
+                                             </VBox.margin>
+                                          </Text>
+                                          <Text fx:id="bpublisher" layoutX="10.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Book Publisher" textAlignment="RIGHT" wrappingWidth="324.13671875">
+                                             <font>
+                                                <Font name="Courier New" size="20.0" />
+                                             </font>
+                                             <VBox.margin>
+                                                <Insets top="15.0" />
+                                             </VBox.margin>
+                                          </Text>
+                                          <Text fx:id="bprice" layoutX="10.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Book Price" textAlignment="RIGHT" wrappingWidth="324.13671875">
+                                             <font>
+                                                <Font name="Courier New" size="20.0" />
+                                             </font>
+                                             <VBox.margin>
+                                                <Insets top="15.0" />
+                                             </VBox.margin>
+                                          </Text>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <Button fx:id="chooseQRBtn" mnemonicParsing="false" text="Choose QR Code">
+                                       <effect>
+                                          <InnerShadow />
+                                       </effect>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </Button>
+                                    <JFXButton buttonType="RAISED" onAction="#clearAll" stylesheets="@../css/mouse_hover.css" text="Clear All" textFill="WHITE">
+                                       <HBox.margin>
+                                          <Insets left="100.0" />
+                                       </HBox.margin>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </JFXButton>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="68.0" prefHeight="165.0" prefWidth="594.0">
+                                 <children>
+                                    <TextField fx:id="custid" alignment="CENTER" prefHeight="33.0" prefWidth="211.0" promptText="Enter Customer ID:">
+                                       <HBox.margin>
+                                          <Insets left="5.0" />
+                                       </HBox.margin>
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </TextField>
+                                    <VBox alignment="CENTER" prefHeight="158.0" prefWidth="369.0">
+                                       <children>
+                                          <Text fx:id="custname" strokeType="OUTSIDE" strokeWidth="0.0" text="Customer Name" textAlignment="RIGHT" wrappingWidth="328.13671875">
+                                             <font>
+                                                <Font name="Courier New" size="20.0" />
+                                             </font>
+                                          </Text>
+                                          <Text fx:id="custmno" layoutX="10.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Customer  Mobile No" textAlignment="RIGHT" wrappingWidth="328.13671875">
+                                             <font>
+                                                <Font name="Courier New" size="20.0" />
+                                             </font>
+                                             <VBox.margin>
+                                                <Insets top="20.0" />
+                                             </VBox.margin>
+                                          </Text>
+                                          <Text fx:id="custmail" layoutX="10.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Customer Email ID" textAlignment="RIGHT" wrappingWidth="328.13671875">
+                                             <font>
+                                                <Font name="Courier New" size="20.0" />
+                                             </font>
+                                             <VBox.margin>
+                                                <Insets top="20.0" />
+                                             </VBox.margin>
+                                          </Text>
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets top="20.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                              </HBox>
+                              <VBox alignment="CENTER_LEFT" prefHeight="56.0" prefWidth="594.0">
+                                 <children>
+                                    <Button fx:id="newCustomer" mnemonicParsing="false" onAction="#addCustomer" text="New Customer ?">
+                                       <VBox.margin>
+                                          <Insets left="5.0" />
+                                       </VBox.margin>
+                                       <effect>
+                                          <InnerShadow />
+                                       </effect>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </Button>
+                                 </children>
+                              </VBox>
+                              <VBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="365.0" prefHeight="56.0" prefWidth="594.0">
+                                 <children>
+                                    <Button fx:id="billBtn" mnemonicParsing="false" onAction="#billGenerate" text="Generate Bill">
+                                       <VBox.margin>
+                                          <Insets left="5.0" />
+                                       </VBox.margin>
+                                       <effect>
+                                          <InnerShadow />
+                                       </effect>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </Button>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="-20.0" top="10.0" />
+                                 </padding>
+                                 <VBox.margin>
+                                    <Insets bottom="-15.0" />
+                                 </VBox.margin>
+                              </VBox>
+                              <Text fx:id="totalPrice" strokeType="OUTSIDE" strokeWidth="0.0" text="₹ Total Price /-" textAlignment="RIGHT">
+                                 <VBox.margin>
+                                    <Insets left="400.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font name="Baskerville Old Face" size="20.0" />
+                                 </font>
+                              </Text>
+                              <Button fx:id="pay" contentDisplay="RIGHT" mnemonicParsing="false" onAction="#doPayment" prefHeight="27.0" prefWidth="594.0" text="Pay">
+                                 <font>
+                                    <Font name="Cambria" size="30.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="8.0" top="45.0" />
+                                 </VBox.margin>
+                                 <effect>
+                                    <DropShadow height="37.12" radius="8.78" spread="0.37" width="0.0" />
+                                 </effect>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <padding>
+                                    <Insets top="5.0" />
+                                 </padding>
+                              </Button>
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+         </tabs>
+      </JFXTabPane>
+      <JFXButton fx:id="searchBtn" layoutX="601.0" layoutY="4.0" onAction="#quickSearch" prefHeight="44.0" prefWidth="41.0" text="  ">
+         <graphic>
+            <ImageView fitHeight="32.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icons/search.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXButton>
+      
+      <JFXDrawer fx:id="drawer" defaultDrawerSize="180.0" direction="RIGHT" layoutX="624.0" layoutY="65.0" prefHeight="528.0" prefWidth="173.0" />
+      <JFXButton buttonType="RAISED" contentDisplay="RIGHT" layoutX="742.0" layoutY="-7.0" onAction="#closeMainUI" prefHeight="55.0" prefWidth="59.0" stylesheets="@../css/mouse_hover.css" text=" ">
+         <graphic>
+            <ImageView fitHeight="29.0" fitWidth="29.0" opacity="0.43" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icons/close.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+   </children>
+</AnchorPane>

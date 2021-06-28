@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="417.0" prefWidth="564.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bookstore.MainUI.SearchCustomerController">
+   <children>
+      <ImageView fitHeight="417.0" fitWidth="564.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icons/nathan-dumlao-lvWw_G8tKsk-unsplash.jpg" />
+         </image>
+      </ImageView>
+      <TextField fx:id="search" alignment="CENTER" layoutX="91.0" layoutY="14.0" prefHeight="32.0" prefWidth="294.0" promptText="Enter Customer ID" style="-fx-background-radius: 20 20 20 20;">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></TextField>
+      <JFXButton fx:id="searchBtn" layoutX="414.0" layoutY="14.0" onAction="#searchCustID" prefHeight="29.0" prefWidth="57.0" text=" ">
+         <graphic>
+            <ImageView fitHeight="33.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icons/search.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXButton>
+      <Pane layoutX="116.0" layoutY="124.0" opacity="0.57" prefHeight="215.0" prefWidth="310.0" style="-fx-background-color: #ffffff;">
+         <children>
+            <VBox alignment="CENTER" prefHeight="215.0" prefWidth="310.0">
+               <children>
+                  <Text fx:id="custname" fill="#0a0a0a" strokeType="OUTSIDE" strokeWidth="0.0" text="Customer Name" textAlignment="CENTER" wrappingWidth="328.13671875">
+                     <font>
+                        <Font name="Courier New" size="20.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="custmno" fill="#0a0a0a" layoutX="10.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Customer  Mobile No" textAlignment="CENTER" wrappingWidth="328.13671875">
+                     <font>
+                        <Font name="Courier New" size="20.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                  </Text>
+                  <Text fx:id="custmail" fill="#0a0a0a" layoutX="10.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Customer Email ID" textAlignment="CENTER" wrappingWidth="328.13671875">
+                     <font>
+                        <Font name="Courier New" size="20.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                  </Text>
+               </children>
+            </VBox>
+         </children>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Pane>
+   </children>
+</AnchorPane>
